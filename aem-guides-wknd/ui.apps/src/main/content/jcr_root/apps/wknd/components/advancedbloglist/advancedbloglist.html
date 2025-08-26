@@ -1,0 +1,30 @@
+<div
+  data-sly-use.model="com.adobe.aem.guides.wknd.core.models.AdvancedBlogListModel"
+  data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.js @ categories='wknd.advancedblog'}"
+  class="advanced-blog-list"
+>
+  <h2 class="blog-list-title">${model.title}</h2>
+
+  <div class="blog-controls">
+    <input
+      type="text"
+      id="blog-search-input"
+      placeholder="Search by title..."
+    />
+    <select id="blog-sort-select">
+      <option value="date">Sort by Date</option>
+      <option value="author">Sort by Author</option>
+    </select>
+  </div>
+
+  <div id="blog-list-container" class="blog-posts-wrapper">
+    <div class="loader">Loading posts...</div>
+  </div>
+
+  <nav class="blog-pagination">
+    <button id="blog-prev-btn" disabled>Previous</button>
+    <span id="blog-page-indicator">Page 1</span>
+    <button id="blog-next-btn">Next</button>
+  </nav>
+</div>
