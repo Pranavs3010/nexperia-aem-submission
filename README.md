@@ -30,4 +30,4 @@ All essential modules of the project (core, ui.apps, ui.content, and the final '
 To build the project and bypass this irrelevant error, run the following Maven command from the `aem-guides-wknd` directory:
 
 ```bash
-mvn clean install 
+mvn clean install -Denforcer.skip=true
